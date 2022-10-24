@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="demoFormulario.css">
+    <title>Fundación Beatriz Ramseyer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-info" id="hideandshow">
+        <div class="divh2"><h2>Tu donación cumple sueños</h2></div>
+        <div class="divcenter1">
+          <div class="radio">
+            <input
+              class="radio-input"
+              type="radio"
+              value="option1"
+              name="myRadio"
+              id="op-1"
+              checked
+              onclick="mostrarFormulario1()"
+            />
+            <label class="radio-label" for="op-1">Unica</label>
+            <input
+              class="radio-input"
+              type="radio"
+              value="option2"
+              name="myRadio"
+              id="op-2"
+              onclick="mostrarFormulario2()"
+            />
+            <label class="radio-label" for="op-2">Mensual</label>
+          </div>
+        </div>
+        <div class="text">
+          <form name= "myForm1" action="" id="form1">
+            <div class="op-text" id="op-1-text">
+              <div>
+                <div class="divradiodonation">
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-1"
+                    onchange="habilitarUnica()"
+                  />
+                  <label class="radio-label" for="opcion-1">$200</label>
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-2"
+                    value="200"
+                    onchange="habilitarUnica()"
+                  />
+                  <label class="radio-label" for="opcion-2">$300</label>
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-3"
+                    value="300"
+                    onchange="habilitarUnica()"
+                  />
+                  <label class="radio-label" for="opcion-3">$500</label>
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-4"
+                    value="500"
+                    onchange="habilitarUnica()"
+                  />
+                  <label class="radio-label" for="opcion-4">$1000</label>
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-5"
+                    value="1000"
+                    onchange="habilitarUnica()"
+                  />
+                  <label class="radio-label" for="opcion-5">$5000</label>
+                 <input class="radio-input"
+                 type="radio"
+                 name="RadioDonation"
+                 id="opcion-6"
+                 onchange="habilitarUnica()"
+                 value="5000"/>
+                 <label class="radio-label" for="opcion-6">Otro monto</label>
+                </div>
+                <div>
+                  <input
+                    type="number"
+                    class="numberinput"
+                    id="amountquantity"
+                    min="250"
+                    placeholder="Ej: $100"
+                    value="250"
+                  required/>
+                </div>
+              </div>
+            <button class="botonDonar" type="button" id="botondonar2" disabled="true">Donar</button>
+          <!-- ///////////////////////////////////////////////////////
+          //////////////////////////////////////////////////////
+          //////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////// -->
+          </div>
+          </form>
+          <form name= "myForm2" action="" id="form2">
+            <div class="op-text" id="op-2-text" >
+              <div>
+                <div class="divradiodonation">
+                  <input
+                    class="radio-input-monthly"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-1-monthly"
+                    onchange="habilitarMensual()"
+                  />
+                  <label class="radio-label-monthly" for="opcion-1">$100</label>
+                  <input
+                    class="radio-input-monthly"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-2-monthly"
+                    value="200"
+                    onchange="habilitarMensual()"
+                  />
+                  <label class="radio-label-monthly" for="opcion-2">$300</label>
+                  <input
+                    class="radio-input-monthly"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-3-monthly"
+                    value="300"
+                    onchange="habilitarMensual()"
+                  />
+                  <label class="radio-label-monthly" for="opcion-3">$500</label>
+                  <input
+                    class="radio-input-monthly"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-4-monthly"
+                    value="500"
+                    onchange="habilitarMensual()"
+                  />
+                  <label class="radio-label-monthly" for="opcion-4">$1000</label>
+                  <input
+                    class="radio-input-monthly"
+                    type="radio"
+                    name="RadioDonation"
+                    id="opcion-5-monthly"
+                    value="1000"
+                    onchange="habilitarMensual()"
+                  />
+                  <label class="radio-label-monthly" for="opcion-5">$5000</label>
+                  <input class="radio-input-monthly"
+                 type="radio"
+                 name="RadioDonation"
+                 id="opcion-6-monthly"
+                 value="5000"
+                 onchange="habilitarMensual()"
+                 />
+                  <label class="radio-label-monthly" for="opcion-6">Otro monto</label>
+                </div>
+                <div>
+                  <input
+                    type="number"
+                    class="numberinput"
+                    id="amountquantity2"
+                    min="250"
+                    placeholder="Ej: $850"
+                    value="250"
+                    required
+                    onchange="habilitarMensual()"/>
+                </div>
+              </div>
+                <h2>Datos del donante</h2>
+                <input
+                  placeholder="Nombre"
+                  type="text"
+                  class="input"
+                  id="firstName"
+                  onchange="habilitarMensual()"
+                />
+                <input
+                  placeholder="Apellido"
+                  type="text"
+                  class="input"
+                  id="surname"
+                  onchange="habilitarMensual()"
+                />
+                <input
+                  placeholder="Celular"
+                  type="tel"
+                  class="input"
+                  onchange="habilitarMensual()"
+                  id="phone"
+                />
+                <input
+                  placeholder="Email"
+                  type="email"
+                  class="input"
+                  onchange="habilitarMensual()"
+                  id="email"
+                />
+                <br />
+                <input
+                  type="checkbox"
+                  name="checkboxMonto"
+                  id="checkmont"
+                  onchange="habilitarMensual()"
+                /><label for="checkmont"
+                  >Acepto donar mensualmente el monto seleccionado</label
+                >
+
+                <br>
+
+               
+                
+
+
+            <button class="botondonar3" type="button" id="botondonar3" disabled="true">Donar</button>
+
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="demoFormulario.js"></script>
+  </body>
